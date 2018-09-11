@@ -3,7 +3,6 @@
 **"A silver tape da Internet"**
 
 ### Legibilidade
-Eeeeeeeeeh...
 
 ### Redigibilidade
 
@@ -13,13 +12,17 @@ Eeeeeeeeeh...
 
 ### Facilidade de Aprendizado
 
-### Ortogonalidade
+### Ortogonalidade 
 
 ### Reusabilidade
 
 ### Modificabilidade
 
 ### Portabilidade
+
+
+
+
 
 ## Tipos de dados
 
@@ -255,7 +258,7 @@ Contexto em que não interessa o valor de retorno.
 #### Aritmética
 
 #### Strings
-`.`: Concatena dois literais e retorna uma string
+`.`: Concatena dois escalares e retorna uma string
 ```perl
 #!/usr/bin/perl
 
@@ -273,4 +276,55 @@ hi1
 4chan.org
 6502
 
+```
+
+#### Arrays
+Funções `push`, `pop`, `shift`, `unshift`: Adicionam e removem elementos no final ou início de um array, respectivamente
+
+Operador range (`..`): Gera uma sequência de elementos dentro de um range. Os literais especificando o range devem ser do mesmo tipo, e podem ser numerais, caracteres ou strings.
+
+```perl
+#!/usr/bin/perl
+
+@a = 0..4;
+@b = 130..139;
+@c = "aa".."cc";
+@d = a..c;
+print "@a\n@b\n@c\n@d\n";
+```
+
+```
+0 1 2 3 4
+130 131 132 133 134 135 136 137 138 139
+aa ab ac ba bb bc ca cb cc
+a b c
+
+```
+
+Slices: Extrair elementos de um array:
+
+```perl
+#!/usr/bin/perl
+
+@a = (23, 999, 1, 42);
+@b = @a[0, 2];
+@c = @a[0..2];
+print "@a\n@b\n@c\n";
+```
+
+```
+23 999 1 42
+23 1
+23 999 1
+
+```
+
+#### Hashes
+
+Acessando elementos de um hash:
+
+```perl
+#!/usr/bin/perl
+
+%h = {}
 ```
